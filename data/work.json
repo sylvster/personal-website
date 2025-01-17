@@ -1,0 +1,14 @@
+[
+    {
+        "Company": "Intuit Credit Karma",
+        "Position": "Software Engineer Intern",
+        "Date": "May 2023 - Aug 2023",
+        "Image": "ck.png"
+    },
+    {
+        "Company": "Berkeley Seismology Lab",
+        "Position": "Student ML Researcher",
+        "Date": "Oct 2022 - Current",
+        "Image": "bsl.jpg"
+    }
+]

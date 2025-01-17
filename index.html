@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="window">
+            <div id="top-bar">
+                <button id="menu-button"> <img src="assets/menu.svg"> </button>
+            </div>
+            <div class="content">
+                <!-- About -->
+                <div class="section" style="width: calc(60% - 10px); height: 400px;">
+                    <h1> About </h1>
+                    <div id="about-box" class="content-box">
+                        <div id="pfp-box">
+                            <img id="pfp-img" src="assets/pfp.png"></img>
+                        </div>
+                        <div id="about-text">
+                            <h2> Sylvester Seo </h2>
+                            <p> sylvesterseo@berkeley.edu <p>
+                            <div class="v8"></div>
+                            <p> Hi! I am a 4th year student at UC Berkeley pursuing a B.A. in Computer Science, expected to graduate in Spring 2025. I'm currently working part-time at the Berkeley Seismology Laboratory. </p>
+                            <div class="v8"></div>
+                            <p> When I'm not working, you can usually find me skiing, learning how to dance, playing the piano and the ocarina, or drawing pixel art. I also love playing Pokemon, and one of my favorite activities include indie game development. </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work History -->
+                <div class="section" style="width: calc(40% - 10px); height: 400px;">
+                    <div></div>
+                    <h2> Work History </h2>
+                    <div id="career-box" class="content-box"></div>
+                </div>
+
+                <!-- Timezone -->
+                <div class="section" style="width: calc(40% - 10px); height: 350px;">
+                    <div></div>
+                    <h2> Timezone </h2>
+                    <div id="clock-box" class="content-box">
+                        <div class="v8"></div>
+                        <p> The time where I am at currently is <b><span id="my-time"></span></b>.</p>
+                        <p> That is <b><span id="time-offset"></span></b> your device! </p>
+                        <div class="v8"></div>
+                        <div id="clock-container">
+                            <div></div>
+                            <div class="clock">
+                                <div id="my-hour-arbor" class="arbor">
+                                    <div class="hour-hand"></div>
+                                </div>
+                                <div id="my-minute-arbor" class="arbor">
+                                    <div class="minute-hand"></div>
+                                </div>
+                                <div id="my-second-arbor" class="arbor">
+                                    <div class="second-hand"></div>
+                                </div>
+                            </div>
+                            <div class="clock">
+                                <div id="your-hour-arbor" class="arbor">
+                                    <div class="hour-hand"></div>
+                                </div>
+                                <div id="your-minute-arbor" class="arbor">
+                                    <div class="minute-hand"></div>
+                                </div>
+                                <div id="your-second-arbor" class="arbor">
+                                    <div class="second-hand"></div>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div class="v8"></div>
+                    </div>
+                </div>
+
+                <div class="section" style="width: 25%; height: 400px;">
+                    <div></div>
+                    <h2> Skills </h2>
+                    <div id="skills-box" class="content-box"></div>
+                </div>
+
+                <div class="section" style="width: calc(35% - 30px); height: 200px">
+                    <div></div>
+                    <h2> &nbsp Recent Changes </h2>
+                    <div class="content-box"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/index.js"></script>
+    
+</body>
+</html>

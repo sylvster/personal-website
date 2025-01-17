@@ -1,0 +1,36 @@
+[
+    {
+        "Category": "Language",
+        "Items": [
+            "🐍 Python",
+            "☕ Java",
+            "🌐 HTML/CSS/Javascript",
+            "🎯 Dart",
+            "🐹 Go",
+            "🔧 C",
+            "➕ C++",
+            "📚 Scheme"
+        ]
+    },
+    {
+        "Category": "Dev Tools",
+        "Items": [
+            "🔄 CircleCI",
+            "🌍 Terraform",
+            "📊 Splunk",
+            "☁️ Google Cloud Services",
+            "🐳 Docker",
+            "🕸️ Kubernetes",
+            "📂 Git"
+        ]
+    },
+    {
+        "Category": "Libraries/Frameworks",
+        "Items": [
+            "🕊️ Flutter",
+            "⚛️ ReactJS",
+            "🧠 Pytorch/Scikit-Learn",
+            "🐼 Numpy/Pandas"
+        ]
+    }
+]
