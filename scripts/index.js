@@ -28,7 +28,7 @@ function updateTime() {
 
 function getTimezoneOffset() {
     const localTime = new Date();
-    const pstOffset = -8;
+    const pstOffset = -7;
     const localOffset = - localTime.getTimezoneOffset() / 60;
     const timeDifference = localOffset - pstOffset;
 
@@ -132,6 +132,84 @@ function readSkills() {
         }));
 }
 
+class BlogManager {
+    constructor() {
+        this.datesLog = [];
+        this.messageLog = [];
+        this.imageLog = [];
+        this.captionLog = [];
+
+        this.commitMessage = document.getElementById("display-commit-message");
+        this.commitDate = document.getElementById("display-commit-date");
+        this.blogImage = document.getElementById("blog-img");
+        this.blogCaption = document.getElementById("blog-caption");
+
+        this.leftButton = document.getElementById("blog-button-left");
+        this.rightButton = document.getElementById("blog-button-right");
+
+        this.index = 0;
+
+        this.renderLogs();
+    }
+
+    async getCommits() {
+        await fetch("https://api.github.com/repos/sylvster/personal-website/commits")
+            .then((response) => response.json())
+            .then((json) => {
+                json.forEach(element => {
+                    let commit_time = new Date(element["commit"]["committer"]["date"]);
+                    let commit_message = element["commit"]["message"];
+
+                    this.datesLog.push(commit_time.toDateString());
+                    this.messageLog.push(commit_message);
+                })
+            })
+    }
+
+    async getBlogs() {
+        await fetch("/data/blogs.json")
+            .then((response) => response.json())
+            .then((json) => json.forEach(element => {
+                this.imageLog.push(`assets/blogs/${element["image_path"]}`);
+                this.captionLog.push(element["caption"]);
+            }))
+    }
+
+    async renderLogs() {
+        await this.getCommits();
+        await this.getBlogs();
+
+        this.messageLog.reverse();
+        this.datesLog.reverse();
+
+        console.log(this.messageLog);
+        console.log(this.captionLog);
+
+        this.enableBlog();
+    }
+
+    enableBlog() {
+        this.leftButton.addEventListener('click', () => this.changeIndex(-1));
+        this.rightButton.addEventListener('click', () => this.changeIndex(1));
+        this.renderBlog();
+    }
+
+    changeIndex(delta) {
+        this.index += delta;
+        this.index = Math.max(0, this.index);
+        this.index = Math.min(this.index, Math.min(this.messageLog.length - 1, this.captionLog.length - 1));
+        this.renderBlog();
+    }
+
+    renderBlog() {
+        this.commitMessage.textContent = this.messageLog[this.index];
+        this.commitDate.textContent = this.datesLog[this.index];
+        this.blogImage.src = this.imageLog[this.index];
+        this.blogCaption.textContent = this.captionLog[this.index];
+    }
+}
+
+const blogManager = new BlogManager();
 
 readWorkHistory();
 readSkills();

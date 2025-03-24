@@ -1,0 +1,10 @@
+[
+    {
+        "image_path": "koko.png",
+        "caption": "I'm adding a small blog with each commit made to this website's repository! This is Koko, my roommate's cat :D"
+    },
+    {
+        "image_path": "error.png",
+        "caption": "Uh oh... still under construction..."
+    }
+]
