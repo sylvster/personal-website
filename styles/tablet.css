@@ -1,0 +1,44 @@
+@media (max-width: 846px) {
+    main {
+        position: static;
+    }
+
+    #window {
+        height: auto;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .section {
+        height: 400px;
+        max-height: 400px;
+    }
+
+    #about-section {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    #career-section {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    #time-section {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    #skills-section {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    #blog-section {
+        grid-column: 1;
+        grid-row: 5;
+    }
+}

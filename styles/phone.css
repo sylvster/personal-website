@@ -1,0 +1,44 @@
+@media (max-width: 565px) {
+    h1 {
+        font-size: min(8vw, 32px);
+    }
+
+    h2 {
+        font-size: min(6vw, 24px);
+    }
+
+    h3 {
+        font-size: min(5vw, 20px);
+    }
+
+    p {
+        font-size: min(4vw, 16px);
+    }
+
+    #about-box {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 12px;
+    }
+
+    #about-section.section {
+        height: 600px;
+        max-height: 600px;
+    }
+    
+    #pfp-box {
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    #about-intro {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    #about-content {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+    }
+}

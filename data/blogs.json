@@ -4,7 +4,11 @@
         "caption": "I'm adding a small blog with each commit made to this website's repository! This is Koko, my roommate's cat :D"
     },
     {
-        "image_path": "error.png",
-        "caption": "Uh oh... still under construction..."
+        "image_path": "tahoe.jpg",
+        "caption": "Lake Tahoe is my favorite place to ski at! That's me :)"
+    },
+    {
+        "image_path": "8ball.png",
+        "caption": "My CS journey started out in fifth grade when I discovered Scratch! The very first project I made was a magic 8 ball that gave yes/no answers randomly based on your input."
     }
 ]
